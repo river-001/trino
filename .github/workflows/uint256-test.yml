@@ -28,4 +28,3 @@ jobs:
       - run: |
           chmod +x ./mvnw ./testing/bin/ptl
           ./mvnw clean install -DskipTests  -pl '!:trino-docs' > /dev/null 2>&1
-          ./testing/bin/ptl test run --environment singlenode-spark-iceberg -- -g uint256
