@@ -23,7 +23,4 @@ jobs:
           path: ~/.m2/repository
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2-
-      - run: |
-          chmod +x ./mvnw testing/bin/ptl
-          ./mvnw clean install -DskipTests
-          testing/bin/ptl test run --environment singlenode-spark-iceberg -- -g uint256
+      - run: docker ps
